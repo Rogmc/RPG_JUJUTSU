@@ -2,7 +2,6 @@
 
 <button id="botaoIA">Gerar IA</button>
 <div id="saidaIA"></div>
-
 #rpg #system #core
 
 🧱 CORE
