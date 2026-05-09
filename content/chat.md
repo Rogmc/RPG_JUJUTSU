@@ -5,4 +5,3 @@
 
 <pre id="out"></pre>
 
-<script src="/chat.js"></script>

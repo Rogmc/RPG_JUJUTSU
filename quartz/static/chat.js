@@ -1,7 +1,7 @@
 async function send() {
   const msg = document.getElementById("msg").value;
 
-  const res = await fetch("http://localhost:3000/chat", {
+  const res = await fetch("https://boondocks-brownnose-entourage.ngrok-free.dev", {
     method: "POST",
     headers: {"Content-Type": "application/json"},
     body: JSON.stringify({ message: msg })
