@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>RPG Jujutsu IA</title>
+</head>
+<body>
+
+<h1>RPG Jujutsu - IA</h1>
+
+<button id="botaoIA">Gerar Técnica Amaldiçoada</button>
+
+<div id="saidaIA"></div>
+
+<script>
+async function perguntarIA(prompt) {
+  const res = await fetch("http://192.168.0.10:3001/ia", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ prompt })
+  });
+
+  const data = await res.json();
+  return data.resposta;
+}
+
+document.getElementById("botaoIA").onclick = async () => {
+  const resposta = await perguntarIA("Crie uma técnica amaldiçoada para RPG Jujutsu");
+  document.getElementById("saidaIA").innerText = resposta;
+};
+</script>
+
+</body>
+</html>
