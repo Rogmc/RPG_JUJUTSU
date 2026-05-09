@@ -92,8 +92,6 @@ const config: QuartzConfig = {
       Plugin.CustomOgImages(),
     ],
   },
-}
-
 document.addEventListener("DOMContentLoaded", () => {
   const btn = document.getElementById("botaoIA");
 
@@ -114,5 +112,4 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("saidaIA").innerText = data.resposta;
   };
 });
-
 export default config
