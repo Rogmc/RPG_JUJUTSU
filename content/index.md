@@ -1,19 +1,6 @@
 🧭 RPG Jujutsu System — INDEX
 
-<<button id="botaoIA">TESTE IA</button>
-<div id="saidaIA"></div>
 
-<script>
-console.log("JS carregou");
-
-document.addEventListener("DOMContentLoaded", () => {
-  alert("JS ativo no site");
-
-  document.getElementById("botaoIA").onclick = () => {
-    document.getElementById("saidaIA").innerText = "clicou!";
-  };
-});
-</script>
 #rpg #system #core
 
 🧱 CORE
