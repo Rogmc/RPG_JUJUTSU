@@ -6,6 +6,10 @@ import * as Plugin from "./quartz/plugins"
  *
  * See https://quartz.jzhao.xyz/configuration for more information.
  */
+
+head: [
+  "<script src='/ia.js'></script>"
+]
 const config: QuartzConfig = {
   configuration: {
     pageTitle: "Quartz 4",
