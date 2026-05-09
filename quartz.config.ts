@@ -94,4 +94,25 @@ const config: QuartzConfig = {
   },
 }
 
+document.addEventListener("DOMContentLoaded", () => {
+  const btn = document.getElementById("botaoIA");
+
+  if (!btn) return;
+
+  btn.onclick = async () => {
+    document.getElementById("saidaIA").innerText = "Gerando...";
+
+    const res = await fetch("http://SEU_IP:3001/ia", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        prompt: "Crie conteúdo de RPG Jujutsu"
+      })
+    });
+
+    const data = await res.json();
+    document.getElementById("saidaIA").innerText = data.resposta;
+  };
+});
+
 export default config
